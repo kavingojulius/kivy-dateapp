@@ -1,0 +1,329 @@
+<Homepage>:
+    
+    MDScrollView:
+        do_scroll_y:True
+        
+##############  outer boxlayout covering all the content ###########
+
+        MDList:
+            # orientation:'vertical'
+            # size_hint_y:2.0
+            padding:5
+            spacing:15
+        # Widget:
+
+            ##############  First boxlayout ###########
+
+            MDBoxLayout:
+                orientation:'vertical'
+                md_bg_color:[125/255,143/255,148/255,0.3]
+                elevation:0
+                size_hint_y:None
+                height:400
+                spacing:20
+                radius:[0,0,5,50]
+                MDTopAppBar:
+                    elevation:0
+                    md_bg_color: 0.4,0.9,1,0.01                  
+                    specific_text_color: [35/255,118/255,93/255,1]          
+                    title: "Date Finder"
+                    
+                    right_action_items:[['menu', lambda x: nav_drawer.set_state('open')]]
+                MDLabel:
+                    text: "Date Finder "                    
+                    halign: "center"
+                    font_name:'fonts/HTOWERT.TTF'
+                    font_size: "35sp"
+                    bold:True
+                MDRectangleFlatButton:
+                    text: 'Create Account'                    
+                    pos_hint: {"center_x": 0.5}
+                    size_hint_x:None
+                    width:200
+                    radius:[50]
+                    font_size:"15sp"
+                    elevation:0                    
+                    text_color: "white"
+                    line_color: None
+                    md_bg_color: [35/255,118/255,93/255,0.3]
+                    on_release: app.root.current ='signpage'
+
+                MDRaisedButton:
+                    text:'Log In'
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5}
+                    font_size: '18sp'
+                    on_release: app.root.current ='loginpage'
+                Widget:
+            # Widget:
+
+            ##############  second boxlayout ###########
+
+            MDBoxLayout:
+                orientation:'vertical'
+                # size_hint_y:None
+                # height:150
+                adaptive_height:True
+                padding:10,30
+                spacing:40
+                # md_bg_color:[194/255, 205/255, 195/255,0.8]
+                MDLabel:
+                    text:''
+                MDLabel:
+                    text:'Meet new people, interact and find Love or a Real Connection.'
+                    halign:'center'
+                    font_style:'H6'
+                    font_name:'fonts/HTOWERT.TTF'
+                #Widget:
+                MDSeparator:
+                    width:70
+                    color:'green'
+                    size_hint_x:None
+                    height:4                
+                    pos_hint:{"center_x":.5}
+            #Widget:
+
+            ##############  Safety 1 boxlayout ###########
+
+            MDBoxLayout:
+                orientation:'vertical'
+                # size_hint_y:None
+                # height:390
+                adaptive_height:True
+                padding:10
+                spacing:40
+                radius:[30,30,2,2]
+                md_bg_color:[194/255, 205/255, 195/255,0.2]
+
+                MDLabel:
+                    text:'Safety Dating Tips.'
+                    halign:'center'
+                    bold:True
+                    size_hint_y:None
+                    font_name:'fonts/georgiab.ttf'
+                    font_Size:'50sp'
+                    
+                MDLabel:
+                    text:"It's exciting to meet new people. One should be catious when interacting with someone you don't know. Use your best judgement and put your safety first, whether you are exchanging initial messages or meeting in person. "
+                    size_hint_y:None                                        
+                    font_name:'fonts/GOUDOSI.TTF'
+                    font_size:22
+                Widget:
+                MDSeparator:
+                    color:'green'
+            # Widget:
+
+            ##############  Safety 2 boxlayout ###########
+
+            MDBoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:150
+                padding:10
+                spacing:50
+                #md_bg_color:[194/255, 205/255, 195/255,0.8]
+
+                MDLabel:
+                    text:'Online Safety.'
+                    #halign:'center'
+                    bold:True
+                    #size_hint_y:None
+                    font_name:'fonts/georgiab.ttf'
+                    font_Size:'50sp'
+                    
+                MDLabel:
+                    text:"Never send money or share your financial information with anyone"
+                    #size_hint_y:None
+                    font_name:'fonts/HTOWERT.TTF'
+                Widget:
+            # Widget:
+
+            ############## NTH  boxlayout ###########                    
+
+            MDBoxLayout:
+                radius:[30,30,0,0]
+                md_bg_color : [80/255,84/255,84/255,0.1]   
+                size_hint_y:None
+                height:100
+                elevation:0         
+                MDLabel:
+                    text:'@ 2023 Date Finder. All rights reserved.'
+                    halign:'center'
+
+            # Widget:
+
+            ############## Fourth  boxlayout ###########
+
+            # MDGridLayout:
+                
+            #     adaptive_height:True  
+            #     cols:1              
+            #     padding:10
+            #     spacing:10             
+            #     md_bg_color:[194/255, 205/255, 195/255,0.8]
+
+            #     MDGridLayout:                    
+            #         cols:2
+            #         size_hint:1,None
+            #         height:150
+            #         #size:150,200
+            #         #padding:10
+            #         spacing:10
+            #         #pos_hint: {"center_x": 0.5}
+
+            #         MDCard:
+            #             orientation:"vertical"
+            #             size_hint:1,None
+            #             padding:10
+            #             spacing:5
+            #             #size:200,150                         
+            #             height:140
+            #             pos_hint: {"center_x": 0.5, "center_y":0.5}
+            #             halign:"center"
+            #             #height: self.minimum_height                                 
+            #             md_bg_color:[243/255, 246/255, 243/255,0.8]
+            #             MDLabel:
+            #                 text: "Find a connection"                    
+            #                 halign: "center"
+            #                 font_size:"13sp"
+            #             MDIcon:
+            #                 icon:'heart-outline'
+            #                 #halign: "center"
+            #                 pos_hint: {"center_x": 0.5}
+            #                 font_size: '43sp'
+            #                 color:"red"
+                        
+                        
+            #         MDCard:
+            #             orientation:"vertical"                        
+            #             padding:10
+            #             spacing:5
+            #             size:200,100 
+            #             size_hint: 1, None
+            #             height:100
+            #             pos_hint: {"center_x": 0.5}
+            #             #height: self.minimum_height                                 
+            #             md_bg_color:[243/255, 246/255, 243/255,0.8]
+            #             MDLabel:
+            #                 text: "Chat & [i] Date [/i]"                    
+            #                 halign: "center"
+            #                 font_size:"13sp" 
+            #             MDRaisedButton:
+            #                 text:'Log In'
+            #                 elevation:0
+            #                 #halign: "center"
+            #                 pos_hint: {"center_x": 0.5}
+            #                 font_size: '13sp'
+                    
+            #     Widget:
+            # # Widget: 
+
+            Widget:
+            ############## Fifth  boxlayout ###########
+
+            # MDBoxLayout:
+            #     orientation:'vertical'
+            #     size_hint_y:None
+            #     height:270
+            #     padding:10
+            #     md_bg_color:[194/255, 205/255, 195/255,0.8]
+
+            #     MDCarousel:                    
+            #         direction: "right"
+                    
+            #         MDLabel:
+            #             text:"Slide One"
+            #             halign: "center"
+            #         Image:
+            #             source:"yml.png"
+            #         Image:
+            #             source:"yml.png"
+            #         Widget:
+            # Widget:
+
+    MDNavigationDrawer:
+        id:nav_drawer
+        opening_time:0.3
+        closing_time:0.3
+        padding:1
+        MDBoxLayout:
+            orientation:'vertical'
+            FitImage:
+                source:'assets/image.png'
+                size_hint_y:None
+                height:200
+            MDScrollView:
+                do_scroll_y:True
+                padding:5
+                bar_width:2
+                MDList:
+                    OneLineAvatarIconListItem:
+                        text: "Account"
+                        font_name:'fonts/HTOWERT.TTF'
+                        on_release:app.root.current = 'userdetailspage'
+                        IconLeftWidget:
+                            icon: "account"
+                            on_release:app.root.current = 'userdetailspage'
+                            on_release: app.root.transition.direction = "left"
+
+                    OneLineAvatarIconListItem:
+                        text: "About"
+                        font_name:'fonts/HTOWERT.TTF'
+                        # on_release:app.root.current = 'userdetailspage'
+                        IconLeftWidget:
+                            icon: "about"
+                            # on_release:app.root.current = 'userdetailspage'
+
+            MDBoxLayout:
+                adaptive_height:True
+                pos_hint:{'bottom':0.1,}
+                #md_bg_color : [80/255,84/255,84/255,0.3]            
+                MDBoxLayout:
+                    orientation:'vertical'
+                    size_hint_y:None
+                    height:120
+                    spacing:8
+                    padding:5
+                    MDRaisedButton:
+                        text:'Log in'
+                        pos_hint:{'center_x':0.5}
+                        elevation:0
+                        on_release: app.root.current = 'loginpage'
+
+                    MDRaisedButton:
+                        text:'Create Account '                        
+                        pos_hint:{'center_x':0.5}
+                        elevation:0
+                        on_release:app.root.current = 'signpage'
+            # Widget:    
+       
+
+
+
+
+
+    # Widget:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

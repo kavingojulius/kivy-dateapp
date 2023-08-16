@@ -1,0 +1,64 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+<WelcomePage>:
+    
+    MDBoxLayout:
+        padding:5   
+            #md_bg_color: get_color_from_hex("#fffcf4")          
+        MDScrollView:
+            do_scroll_y:True
+
+            MDBoxLayout:
+                orientation:"vertical"
+                #size_hint:1,1  
+                #adaptive_height:True      
+                padding:1
+                spacing:2
+
+                MDBoxLayout:
+                    #orientation:"horizontal"
+                    md_bg_color: [35/255,118/255,93/255,0.4]
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    radius:[5,5,5,50]
+                    padding:25
+
+                    MDLabel:
+                        text:"Date Finder" 
+                        halign:"center"
+                        font_size:25 
+                        bold:True               
+                    MDIcon:
+                        icon:"heart"                        
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        font_size:60
+                        color:"red" 
+                    
+                
+                MDBoxLayout:
+                    MDLabel:
+                        text:"Meeting new people has never been this easy"
+                        halign:"center"
+                        font_size:20
+                        theme_text_color:'Hint'
+                        bold:True
+                        #font_style: "Button"
+
+                MDBoxLayout:
+
+                    MDFillRoundFlatButton:
+                        text: "Welcome >>>"
+                        md_bg_color: [35/255,118/255,93/255,0.3]
+                        theme_text_color:'Hint'
+                        font_style:'Button'
+                        size_hint_x: 1
+                        padding: "20dp"
+                        font_size:25
+                        elevation:1
+                        bold:True            
+                        on_release: app.root.current ='homepage'
+            
+    
+                Widget:
+
+
+

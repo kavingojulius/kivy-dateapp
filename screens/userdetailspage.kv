@@ -1,0 +1,112 @@
+<UserDetailsPage>:
+    MDBoxLayout:
+        orientation: "vertical"
+        padding:5
+        FitImage:
+            opacity: .5
+            size_hint_y: None
+            # size_hint_y: .4
+            height:200
+            source:'assets/image.png'
+        MDSeparator:
+            color:'green'
+            size_hint_x:None
+            width:100
+            height:6
+            radius:10
+            pos_hint:{"center_x":0.5}
+            
+        MDSeparator:
+            color:'green'
+            size_hint_x:None
+            width:200
+            height:6
+            radius:10
+            pos_hint:{"center_x":0.5}
+        MDSeparator:
+            color:'green'
+            size_hint_x:None
+            width:300
+            height:6
+            radius:10
+            pos_hint:{"center_x":0.5}
+        # Widget:
+
+        MDScrollView:
+            size_hint_y: .6
+            # canvas.before:
+            #     Color:
+            #         rgba: 1, 1, 1, 1
+            #     Rectangle:
+            #         pos: self.pos
+            #         size: self.size                    
+            #         source:'assets/bg.png'
+
+            MDList:
+                OneLineListItem:
+                    text: "Edit Profile"
+                    on_release: app.root.current = 'detailspage'
+
+                OneLineListItem:
+                    text: "Logout"
+                    on_release: root.logout()
+
+                # OneLineAvatarIconListItem:
+                #     text: "Edit Profile"
+                #     IconLeftWidget:
+                #         icon: "account"
+                
+                # OneLineAvatarIconListItem:
+                #     text: "Logout"                    
+                #     IconLeftWidget:
+                #         icon: "account-circle"
+                #     on_release: app.root.get_screen('loginpage')
+
+            # Widget:
+        # Widget:
+    # MDFloatLayout:
+        
+    MDBoxLayout:   
+        orientation:'vertical'
+        id:user_details_layout                
+        # adaptive_height: True
+        size_hint_y:None
+        size_hint_x:None
+        height:'150dp'
+        width:190
+        # height: self.minimum_height  # Set the height to fit the content
+        spacing: "10dp" 
+        x: "15dp"  
+        # y: "24dp"
+        padding: "20dp"
+        radius:[30]
+        pos_hint: {"top": .96}
+        md_bg_color : [80/255,84/255,84/255,0.3]    
+                
+        
+                    
+        
+        MDLabel:
+            text:root.username
+            markup: True
+            pos_hint: {"center_x":0.5, "center_y": .7}
+        MDLabel:
+        # OneLineListItem:
+            text: root.email
+            pos_hint: {"center_y": .53}
+            
+        # Widget:
+    MDIconButton:
+        icon: "home"
+        md_bg_color: 0, 0, 0, .2
+        on_release: app.root.current = "homepage"
+        on_release: app.root.transition.direction = "right"
+        pos_hint:
+            # root.width - self.width - dp(12), \
+            # root.height - self.height - dp(12)
+            {"right": .96,"top":0.97}
+
+
+
+
+

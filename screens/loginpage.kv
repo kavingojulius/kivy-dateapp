@@ -1,0 +1,110 @@
+<LoginPage>:
+    MDGridLayout:
+        cols:1
+        padding:10
+        spacing:25
+        MDFloatingActionButton:
+            id: button
+            icon: "arrow-left"
+            font_size:5
+            type:"small"
+            pos_hint:{"top":1}
+            md_bg_color : [8/255,80/255,80/255,0.2]
+            text_color:"green"
+            elevation:0
+            on_release: app.root.current = 'homepage'
+        MDCard :
+            orientation : 'vertical'
+            size_hint : 1,None
+            height : 560
+            pos_hint : {"center_x":.5,"bottom":1}
+            elevation : 0
+            # md_bg_color : [80/255,84/255,84/255,0.1]            
+            padding : 20
+            spacing : 20
+            radius:[50,50,25,25]
+            MDList:
+                spacing : 25
+                MDLabel :
+                    text : "Log In"
+                    font_style : "H4"
+                    font_name:'fonts/HTOWERT.TTF'
+                    font_size : 45
+                    bold:True
+                    halign : "center"
+                    size_hint_y : None
+                    height : self.texture_size[1]                    
+                    color: "green"
+                MDTextField :    
+                    mode : "rectangle"
+                    id:email
+                    hint_text:'Email'                                                    
+                    icon_right : "email"                
+                    halign : "center"                
+                    font_size : '18sp'
+                    pos_hint : {"center_x":.5}
+                    normal_color : [239/255,243/255,245/255,1]
+                    color_active : [1,1,1,1]
+
+                MDTextField:
+                # mode:'round'
+                    id:password
+                    hint_text : "Enter Password"
+                    password : True
+                    #size_hint_x : None
+                    icon_right : "eye-off"
+                    #width : 200
+                    halign : "center"
+                    font_size : '18sp'
+                    pos_hint : {"center_x":.5}
+                    normal_color : [239/255,243/255,245/255,1]
+                    color_active : [1,1,1,1]
+                    
+                MDRectangleFlatButton :
+                    text : "Log in"
+                    font_name:'fonts/HTOWERT.TTF'
+                    font_size : 30                
+                    pos_hint : {"center_x":.5}
+                    #theme_text_color : "Custom"
+                    bold:True
+                    elevation:0
+                    font_style:"Button"
+                    on_release: root.on_login_button_click()
+                    
+
+                MDCard :
+                    orientation : 'horizontal'
+                    size_hint : 1,None
+                    #size : 200,50
+                    #height:50
+                    padding:1
+                    spacing:50
+                    pos_hint: {"center_x": 0.5, "center_y":0.5}
+                    elevation : 0
+                    md_bg_color : [8/255,80/255,80/255,0.01]
+                    MDRaisedButton:
+                        text:'Sign In'
+                        pos_hint : {"center_x":.5}
+                        elevation:0
+                        on_release: app.root.current = 'signpage'
+                    MDRaisedButton:
+                        text:'Home'
+                        pos_hint : {"center_x":.5}
+                        elevation:0
+                        on_release: app.root.current = 'homepage'
+                
+
+            
+            Widget:
+# <Item>
+
+
+
+
+
+
+
+
+
+
+
